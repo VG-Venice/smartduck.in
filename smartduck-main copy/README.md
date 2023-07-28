@@ -1,0 +1,2 @@
+# smartynote
+Personal project 

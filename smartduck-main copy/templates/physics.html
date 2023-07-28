@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% include 'links.html' %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Physics - {{site_name}}</title>
+</head>
+<body>
+    <style>
+        *{
+          font-family: 'Mouse Memoirs', sans-serif;
+        }
+        a{
+          text-decoration: none;
+          color: brown;
+        }
+        ul li{
+              font-size: 18px;
+            }
+            #app_icon{
+              color: mediumpurple;
+              font-size:26px;
+            }
+            nav{
+              background-color: none;
+              background-color: black;
+            }
+            #login a, #signup a{
+              color: white;
+            }
+            header{
+              background-image: url('/static/bg.jpg');
+              background-repeat: no-repeat;
+              height: 60vw;
+              background-size: cover;
+            }
+           #to{
+             background-color: white;
+             width: 100vw;
+             height: 192px;
+             border-bottom: 2px white solid;
+             border-bottom-left-radius: 200%;
+             border-bottom-right-radius: 200%;
+            rotate: 180deg;
+            margin-top: 290px;
+             }
+            h1{
+              color: mediumpurple;
+              margin-top: -650px;
+              margin-left: 30px;
+              font-size: 60px;
+              }  
+            h2{
+              color: white;
+              margin-top: -10px;
+              margin-left: 30px;
+              font-size: 50px;
+              } 
+            .auto-type, span{
+             color: #fff724;
+            }
+            .holderimg{
+                width: 100%;
+                height: 500px;
+            }
+            #cardphy{
+             display: inline-block;
+             margin: 8px;  
+             width: 35vw;
+             margin-left: 9.25vw; 
+            }
+      </style>
+        <nav id="navbar">
+      <ul class="mx-2 nav nav-pills">
+        <li class="nav-item mx-2">
+          <a id="app_icon" class="nav-link" href="/"><i style="color: #fff724;" class="fa-light fa-duck"></i> {{site_name}}</a>
+        </li>
+        <li class="nav-item mt-2">
+          <a style="color: white;margin-left: 24vw;" class="nav-link" href="/">Home</a>
+        </li>
+          <li class="nav-item mt-2">
+          <a style="color: white;" class="nav-link" href="/about_us">About us</a>
+        </li>
+            <li class="nav-item mt-2">
+          <a style="color: white;" class="nav-link" href="/physics">Physics</a>
+        </li>
+            <li class="nav-item mt-2">
+          <a style="color: white;" class="nav-link" href="/chem_periodic_table">Chemistry</a>
+        </li>
+              <li class="nav-item mt-2">
+          <a style="color: white;" class="nav-link" href="https://smartduck-calc.netlify.app">Maths</a>
+        </li>
+          <li style="margin-left: 30%;" id="login" class="nav-item mt-2">
+          <a class="nav-link" href="/login">Login</a>
+        </li>
+        <li id="signup" class="nav-item mt-2">
+          <a href="/signup" class="nav-link">SignUp</a>
+        </li>
+      </ul>
+          </nav>
+<img class="holderimg" src="/static/holder3.jpg"/> 
+<a style="text-decoration: none;" href="/quantities"><div id="cardphy" class="card mb-3">
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img style="height: 176px;" src="/static/holder.jpg" class="img-fluid rounded-start">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Physical Quantities in Physics</h5>
+          <p class="card-text">Click this card to see a list of physical quantities in physics and their values</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 1 month ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div>  
+  </a> 
+  <a href="/constants">
+  <div id="cardphy" class="card mb-3" >
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img style="height: 176px;" src="/static/holder.jpg" class="img-fluid rounded-start">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Fundamental constants in Physics</h5>
+          <p class="card-text">Click this card to see a list of fundamental constants in the world of Physics</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 1 month ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div> 
+  </a>
+  <a href="/formulas/basic">
+  <div id="cardphy" class="card mb-3" >
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img style="height: 176px;" src="/static/holder.jpg" class="img-fluid rounded-start">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Physics Formulas - Basic</h5>
+          <p class="card-text">Click this card to see a list of formulas in the Physics domain</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 1 month ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div> 
+  <div id="cardphy" class="card mb-3" >
+    <div class="row g-0">
+      <div class="col-md-4">
+        <img style="height: 176px;" src="/static/holder.jpg" class="img-fluid rounded-start">
+      </div>
+      <div class="col-md-8">
+        <div class="card-body">
+          <h5 class="card-title">Card title</h5>
+          <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+          <p class="card-text"><small class="text-body-secondary">Last updated 3 mins ago</small></p>
+        </div>
+      </div>
+    </div>
+  </div> 
+</body>
+</html>

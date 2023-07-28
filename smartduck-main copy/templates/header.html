@@ -1,0 +1,95 @@
+<head>
+  {% include 'links.html' %}
+<style>
+      *{
+        font-family: 'Mouse Memoirs', sans-serif;
+      }
+      ul li{
+        font-size: 18px;
+      }
+      #app_icon{
+        color: mediumpurple;
+        font-size:26px;
+      }
+      nav{
+        background-color: none;
+      }
+      #login a, #signup a{
+        color: white;
+      }
+      header{
+        background-image: url('/static/bg.jpg');
+        background-repeat: no-repeat;
+        height: 60vw;
+        background-size: cover;
+      }
+     #to{
+       background-color: white;
+       width: 100vw;
+       height: 192px;
+       border-bottom: 2px white solid;
+       border-bottom-left-radius: 200%;
+       border-bottom-right-radius: 200%;
+      rotate: 180deg;
+      margin-top: 290px;
+       }
+      h1{
+        color: mediumpurple;
+        margin-top: -650px;
+        margin-left: 30px;
+        font-size: 60px;
+        }  
+      h2{
+        color: white;
+        margin-top: -10px;
+        margin-left: 30px;
+        font-size: 50px;
+        } 
+      .auto-type, span{
+       color: #fff724;
+      }
+    </style>
+</head>
+<header>
+    <nav id="navbar">
+<ul class="mx-2 nav nav-pills">
+  <li class="nav-item mx-2">
+    <a id="app_icon" class="nav-link" href="/"><i style="color: #fff724;" class="fa-light fa-duck"></i> {{site_name}}</a>
+  </li>
+  <li class="nav-item mt-2">
+    <a style="color: white;margin-left: 24vw;" class="nav-link" href="/">Home</a>
+  </li>
+    <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="/about_us">About us</a>
+  </li>
+      <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="/physics">Physics</a>
+  </li>
+      <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="/chem_periodic_table">Chemistry</a>
+  </li>
+        <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="https://smartduck-calc.netlify.app">Maths</a>
+  </li>
+    <li style="margin-left: 30%;" id="login" class="nav-item mt-2">
+    <a class="nav-link" href="/login">Login</a>
+  </li>
+  <li id="signup" class="nav-item mt-2">
+    <a href="/signup" class="nav-link">SignUp</a>
+  </li>
+</ul>
+    </nav>
+    </header>
+   <h1>Welcome to {{site_name}}...</h1>
+   <h2 class="mt-1"> Find your notes for <span class="auto-type"></span></h2>
+  <a style="text-decoration: none;" href="#scrollh1"> <button style="background-color: mediumpurple;padding: 8px 16px;border: none;border-radius: 8px;color: white;margin-left: 28px;margin-top: 10px;" id="getstarted" class="btn btn-warning mt-3"> Get Started <i class="fa-solid fa-arrow-right mx-2 mt-1"></i></button></a>
+    <div id="to"><h1 id="scrollh1" class="mb-5" style="z-index: 2;text-align: center;font-size: 52px;color: mediumpurple;rotate: 180deg;margin-top: -10px;margin-bottom: 20px;border: 1px solid white;"> Explore our content</h1></div>
+    <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+    <script>
+      var typed = new Typed(".auto-type", {
+        strings: ["Physics", "Chemistry", "Maths"],
+        typeSpeed: 150,
+        backSpeed: 150,
+        loop: true
+      })
+    </script>

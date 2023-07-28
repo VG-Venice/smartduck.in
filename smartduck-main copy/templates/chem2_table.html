@@ -1,0 +1,151 @@
+{% include 'links.html' %}
+ <style>
+  *{
+    font-family: 'Mouse Memoirs', sans-serif;
+  }
+   a{
+    text-decoration: none;
+    color: white;
+  }
+  ul li{
+        font-size: 18px;
+      }
+   .Metal{
+     background-color: #fce303;
+     color: black;
+     font-weight: 700;
+   }
+   .Non_Metal{
+     background-color: #35E124;
+     color: black;
+     font-weight: 700;
+   }
+   .Transition_Metal{
+     background-color: #1E96DF;
+     color: black;
+     font-weight: 700;
+   }
+  *{border: none;}
+  body{
+    background-color: #001132;
+    color: black;
+  }
+  sup{
+    font-weight: 550;
+    font-family: 'Mouse Memoirs', sans-serif;
+  }
+  table, th, td {
+  border-collapse: collapse;
+}
+    #app_icon{
+        color: mediumpurple;
+        font-size:26px;
+      }
+      nav{
+        background-color: none;
+        font-family: 'Mouse Memoirs', sans-serif;
+      }
+      #login a, #signup a{
+        color: white;
+      }
+      #navbar{
+        box-shadow: 10px 10px 20px white;
+        font-family: 'Mouse Memoirs', sans-serif;
+      }
+      header{
+        background-image: url('/static/bg.jpg');
+        background-repeat: no-repeat;
+        height: 60vw;
+        background-size: cover;
+      }
+     #to{
+       background-color: white;
+       width: 100vw;
+       height: 192px;
+       border-bottom-left-radius: 200%;
+       border-bottom-right-radius: 200%;
+      rotate: 180deg;
+      margin-top: 290px;
+       }
+      h1{
+        color: mediumpurple;
+        margin-top: -650px;
+        margin-left: 30px;
+        font-size: 60px;
+        }  
+      h2{
+        color: white;
+        margin-top: -10px;
+        margin-left: 30px;
+        font-size: 50px;
+        } 
+      .auto-type, span{
+       color: #fff724;
+      }
+    #title{
+      color: royalblue;
+      text-align: center;
+      font-family: 'Mouse Memoirs', sans-serif;
+      font-weight: normal;
+    }
+    .child_el{
+      display: block;
+      text-align: center;
+    }
+    span{
+      font-family: 'Roboto', sans-serif;
+    }
+    a{
+      font-family: 'Roboto', sans-serif;
+    }
+    .nav-link{
+      font-family: 'Mouse Memoirs', sans-serif;
+    }
+    </style>
+ <nav style="box-shadow: 10px 10px 20px white;font-family: 'Mouse Memoirs', sans-serif;" id="navbar">
+<ul class="mx-2 nav nav-pills">
+  <li class="nav-item mx-2">
+    <a style="color: mediumpurple;font-size: 28px;" id="app_icon" class="nav-link" href="/">{{site_name}}</a>
+  </li>
+  <li class="nav-item mt-2">
+    <a style="color: white;margin-left: 24vw;" class="nav-link" href="/">Home</a>
+  </li>
+    <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="/about_us">About us</a>
+  </li>
+      <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="/physics">Physics</a>
+  </li>
+      <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="/chem_periodic_table">Chemistry</a>
+  </li>
+        <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="https://smartduck-calc.netlify.app">Maths</a>
+  </li>
+    <li style="margin-left: 30%;" id="login" class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="/login">Login</a>
+  </li>
+  <li id="signup" class="nav-item mt-2">
+    <a style="color: white;" href="/signup" class="nav-link">SignUp</a>
+  </li>
+</ul>
+    </nav>
+ 
+<h1 style="color: royalblue;text-align: center;font-family: 'Mouse Memoirs', sans-serif;font-weight: normal; margin-top: 30px;font-size: 59px;text-shadow: 1.5px 1.5px 5px white;" id="title">Periodic Table</h1>
+<br/>
+<table style="margin-left: 20vw;">
+  {% for period in pTable %}
+    <tr style="color: white">
+      {%for it in period%}
+      {% set list1 = it.split('-') %}
+      <td style="margin-left: -13px;padding: 13.5px 14.5px;padding-top: 21px;" class="{{list1[3]}}" title="{{list1[2]}}"><div class="parent_el"><div class="child_el">
+        <sup style="color: black;font-size: 12px;margin-left: 5.5px;;font-weight: normal;">
+        <a class="el_val" href="/el_information/{{list1[0]}}" style="color: black;font-family: 'Mouse Memoirs', sans-serif;">{{list1[0]}}</a></sup></div>
+        <div class="child_el"><span style="font-size: 15px;font-weight: 800;" class="{{list1[3]}}">
+        <a style="color: #001133;" class="el_val" href="/el_information/{{list1[0]}}">{{list1[1]}}</a></span></div></div>
+      </td>
+      {%endfor%}
+    </tr>
+  {%endfor%}
+ </table>
+<p>{{list}}</p>

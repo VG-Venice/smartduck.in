@@ -1,0 +1,144 @@
+{% include 'links.html' %}
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+<style>
+  *{
+    font-family: 'Mouse Memoirs', sans-serif;
+  }
+   body{
+     background-image: url('/static/loginnew.jpg');
+     background-size: cover;
+  }
+  .form{
+    background-color: black;
+    width: 45%;
+    border-radius: 6px;
+    height: 60vh;
+    margin-top: 19vh;
+  }
+  .main-div{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  .loginh1{
+    font-family: 'Mouse Memoirs', sans-serif;
+    text-align: center;
+    color: mediumpurple;
+    font-size: 45px;
+  }
+  label{
+    margin-top: 30px;
+    font-family: 'Mouse Memoirs', sans-serif;
+    margin-left: 13vw;
+    margin-bottom: 5px;
+    font-size: 25px;
+    color: tomato;
+  }
+  .username, .password{
+    width: 20vw;
+    margin-left: 12.5vw;
+    margin-bottom: 10px;
+    border: none;
+    border-bottom: 3px solid brown;
+    padding: 3px 4px;
+    background: none;
+    color: white;
+  }
+  .submit{
+    width: 6vw;
+    margin-left: 19.5vw;
+    border: 1px solid brown;
+    background: none;
+  }
+  a{
+    text-decoration: none;
+    color: brown;
+  }
+  ul li{
+        font-size: 18px;
+      }
+      #app_icon{
+        color: mediumpurple;
+        font-size:26px;
+      }
+      nav{
+        background-color: none;
+      }
+      #login a, #signup a{
+        color: white;
+      }
+      header{
+        background-image: url('/static/bg.jpg');
+        background-repeat: no-repeat;
+        height: 60vw;
+        background-size: cover;
+      }
+     #to{
+       background-color: white;
+       width: 100vw;
+       height: 192px;
+       border-bottom: 2px white solid;
+       border-bottom-left-radius: 200%;
+       border-bottom-right-radius: 200%;
+      rotate: 180deg;
+      margin-top: 290px;
+       }
+      h1{
+        color: mediumpurple;
+        margin-top: -650px;
+        margin-left: 30px;
+        font-size: 60px;
+        }  
+      h2{
+        color: white;
+        margin-top: -10px;
+        margin-left: 30px;
+        font-size: 50px;
+        } 
+      .auto-type, span{
+       color: #fff724;
+      }
+</style>
+  <nav id="navbar">
+<ul class="mx-2 nav nav-pills">
+  <li class="nav-item mx-2">
+    <a id="app_icon" class="nav-link" href="/"><i style="color: #fff724;" class="fa-light fa-duck"></i> {{site_name}}</a>
+  </li>
+  <li class="nav-item mt-2">
+    <a style="color: white;margin-left: 24vw;" class="nav-link" href="/">Home</a>
+  </li>
+    <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="/about_us">About us</a>
+  </li>
+      <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="/physics">Physics</a>
+  </li>
+      <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="/chem_periodic_table">Chemistry</a>
+  </li>
+        <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="https://smartduck-calc.netlify.app">Maths</a>
+  </li>
+    <li style="margin-left: 30%;" id="login" class="nav-item mt-2">
+    <a class="nav-link" href="/login">Login</a>
+  </li>
+  <li id="signup" class="nav-item mt-2">
+    <a href="/signup" class="nav-link">SignUp</a>
+  </li>
+</ul>
+    </nav>
+  
+<form method="get" action="/">
+<div class="main-div">
+  <div class="form"><br>
+    <h1 class="loginh1 mt-3">Login to {{site_name}}</h1><br><br>
+    <label style="margin-top: -35px;" for="username">Username</label><br>
+    <input class="username mb-3" type="text" name="username" placeholder="Enter your username"/><br>
+    <label for="username">Password</label><br>
+    <input class="password mb-3" type="password" name="password" placeholder="Enter your password"/><br><br>
+    <button class="submit mb-3" name="submitbtn"><a href="/">Login</a></button>
+  </div>
+</div>
+</form>

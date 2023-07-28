@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    {% include 'links.html' %}
+    <link rel="icon" href="/static/favicon.ico">
+    <title> {{site_name}} </title>
+    <style>
+      *{
+        font-family: 'Mouse Memoirs', sans-serif;
+      } 
+    </style>
+  <body>
+{% include 'header.html' %}
+{% include 'main_body.html' %}
+    <script src="{{url_for('static', filename='script.js')}}"></script>
+  </body>
+</html>

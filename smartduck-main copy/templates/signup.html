@@ -1,0 +1,156 @@
+{% include 'links.html' %}
+<style>
+  body{
+    background-image: url("/static/bgimg2.jpg");
+    background-size: cover;
+  }
+    sup{
+    font-weight: 550;
+    font-family: 'Mouse Memoirs', sans-serif;
+  }
+  table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+    #app_icon{
+        color: mediumpurple;
+        font-size:26px;
+      }
+      nav{
+        background-color: #001133;
+        font-family: 'Mouse Memoirs', sans-serif;
+      }
+      #login a, #signup a{
+        color: white;
+      }
+      #navbar{
+        font-family: 'Mouse Memoirs', sans-serif;
+      }
+      header{
+        background-image: url('/static/bg.jpg');
+        background-repeat: no-repeat;
+        height: 60vw;
+        background-size: cover;
+      }
+  label{
+    font-size: 26px;
+    font-family: 'Mouse Memoirs', sans-serif;
+  }
+  * {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}  
+  .bgimg3 {
+    background-color: black;
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: 535px;
+    width: 450px;
+}
+  .fa-user{
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background-color: dodgerblue;
+    color: white;
+    text-align: center;
+    padding-top: 15px;
+    font-size: 25px;
+  }
+  .i_cont{
+    text-align: center;
+    font-size: 25px;
+    margin-top: -24px;
+    margin-left: -16px;
+  } 
+  label{
+    color: white;
+    width: 100px;
+    margin-left: 175px;
+    margin-bottom: 10px;
+  }
+  .seperator{
+    border: 0.25px solid gray;
+    width: 410px;
+    opacity: 0.4;
+    margin-left: 20px;
+  }
+  input{
+    background: black;
+    color: white;
+    border: none;
+    border-bottom: 1px solid dodgerblue;
+    margin-left: 65px;
+    text-align: center;
+    width: 320px;
+    margin-bottom: 8px;
+    padding: 3px 0px;
+  }
+  #buttonsub{
+    width: 100px;
+    margin-left: 165px;
+    margin-bottom: 5px;
+    background: black;
+    color: dodgerblue;
+    border: 1px solid dodgerblue;
+    border-radius: 5px;
+    padding: 3px 2px;
+  }
+  #loginpage{
+    text-align: center;
+    width: 250px;
+    margin-left: 100px;
+    color: dodgerblue;
+  }
+</style>
+<nav style="box-shadow: 10px 10px 20px white;font-family: 'Mouse Memoirs', sans-serif;" id="navbar">
+<ul class="mx-2 nav nav-pills">
+  <li class="nav-item mx-2">
+    <a style="color: mediumpurple;font-size: 28px;" id="app_icon" class="nav-link" href="/">{{site_name}}</a>
+  </li>
+  <li class="nav-item mt-2">
+    <a style="color: white;margin-left: 24vw;" class="nav-link" href="/"> Home</a>
+  </li>
+    <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="/about_us"> About us</a>
+  </li>
+      <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="/physics"> Physics</a>
+  </li>
+      <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="/chem_periodic_table"> Chemistry</a>
+  </li>
+        <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="https://smartduck-calc.netlify.app"> Maths</a>
+  </li>
+    <li style="margin-left: 33%;" id="login" class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="/login"> Login</a>
+  </li>
+  <li id="signup" class="nav-item mt-2">
+    <a style="color: white;" href="/signup" class="nav-link"> SignUp</a>
+  </li>
+</ul>
+    </nav>
+<form method="post" action="/login">
+  <div class="sectioner">
+    <br>
+<div class="bgimg3 mt-5">
+  <p class="i_cont"><i class="fa-solid fa-user"></i></p><br>
+  <label style="margin-top: -24px;" for="fullname">Full Name</label><br>
+  <input type="text" required name="fullname" id="fullname" placeholder="Fullname"/><br>
+    <label for="fullname">Username</label><br>
+  <input type="text" name="username" id="username" placeholder="Enter username" required/><br>
+    <label for="fullname">Email here</label><br>
+  <input type="email" name="email" id="email" placeholder="Enter email" required/><br>
+    <label for="fullname"> Password</label><br>
+  <input type="password" name="password" id="password" placeholder="Enter password" required/><br>
+ <a href="/login"><input type="submit" title="Create an Account" value="Sign up" id="buttonsub" class="mt-3 mb-2"></a>
+  <div class="seperator mt-3 mb-3"></div>
+  <a href="/login" id="loginpage" style="text-decoration: none;">Have an account? Login instead</a>
+</div>
+    </div>
+</form>

@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% include 'links.html' %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Constants - {{site_name}}</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #001133;
+        }
+        table{
+            background-color: rgb(55, 149, 243);
+            font-family: 'Mouse Memoirs', sans-serif;
+            border: 1px solid black;
+        }
+    .tablephy{
+        font-family: 'Mouse Memoirs', sans-serif;
+        border-collapse: separate;
+        border-radius: 22px;
+        box-shadow: 7px 8px 20px white;
+        border-right: none;
+    }
+    td{
+       border-left: 1px solid black;
+       font-size: 20px;
+       color: #fff724;
+       z-index: 2;
+    }
+    td, th{
+        padding: 3px 4px;
+    }
+    .tds{
+       border-bottom: 1px solid black;
+       border-right: 1px solid black;
+    }
+    th{
+       height: 30px;
+       font-size: 20px;
+    }
+    .tablephy thead th{
+        position: sticky;
+        z-index: 4;
+        top: 0;
+        background: black;
+        border: 1px solid black;
+        border-bottom: 1px solid black;
+        padding: 6px 15px;
+        margin-top: -15px;
+        height: 20px;
+        color: rgba(241, 25, 25, 0.891);
+    }
+    #app_icon{
+        color: mediumpurple;
+        font-size:26px;
+      }
+      nav{
+        background-color: none;
+        font-family: 'Mouse Memoirs', sans-serif;
+      }
+      #login a, #signup a{
+        color: white;
+      }
+      #navbar{
+        box-shadow: 10px 10px 20px white;
+        font-family: 'Mouse Memoirs', sans-serif;
+      }
+      header{
+        background-image: url('/static/bg.jpg');
+        background-repeat: no-repeat;
+        height: 60vw;
+        background-size: cover;
+      }
+     #to{
+       background-color: white;
+       width: 100vw;
+       height: 192px;
+       border-bottom-left-radius: 200%;
+       border-bottom-right-radius: 200%;
+      rotate: 180deg;
+      margin-top: 290px;
+       }
+      h1{
+        color: mediumpurple;
+        margin-top: -650px;
+        margin-left: 30px;
+        font-size: 60px;
+        }  
+      h2{
+        color: white;
+        margin-top: -10px;
+        margin-left: 30px;
+        font-size: 50px;
+        } 
+      .auto-type, span{
+       color: #fff724;
+      }
+    #title{
+      color: royalblue;
+      text-align: center;
+      font-family: 'Mouse Memoirs', sans-serif;
+      font-weight: normal;
+    }
+    .child_el{
+      display: block;
+      text-align: center;
+    }
+    span{
+      font-family: 'Roboto', sans-serif;
+    }
+    a{
+      font-family: 'Roboto', sans-serif;
+    }
+    .nav-link{
+      font-family: 'Mouse Memoirs', sans-serif;
+    }
+    </style>
+</head>
+<body>
+    <nav style="box-shadow: 10px 10px 20px white;font-family: 'Mouse Memoirs', sans-serif;" id="navbar">
+        <ul class="mx-2 nav nav-pills">
+          <li class="nav-item mx-2">
+            <a style="color: mediumpurple;font-size: 28px;" id="app_icon" class="nav-link" href="/">{{site_name}}</a>
+          </li>
+          <li class="nav-item mt-2">
+            <a style="color: white;margin-left: 24vw;" class="nav-link" href="/">Home</a>
+          </li>
+            <li class="nav-item mt-2">
+            <a style="color: white;" class="nav-link" href="/about_us">About us</a>
+          </li>
+              <li class="nav-item mt-2">
+            <a style="color: white;" class="nav-link" href="/physics">Physics</a>
+          </li>
+              <li class="nav-item mt-2">
+            <a style="color: white;" class="nav-link" href="/chem_periodic_table">Chemistry</a>
+          </li>
+                <li class="nav-item mt-2">
+            <a style="color: white;" class="nav-link" href="https://smartduck-calc.netlify.app">Maths</a>
+          </li>
+            <li style="margin-left: 32%;" id="login" class="nav-item mt-2">
+            <a style="color: white;" class="nav-link" href="/login">Login</a>
+          </li>
+          <li id="signup" class="nav-item mt-2">
+            <a style="color: white;" href="/signup" class="nav-link">SignUp</a>
+          </li>
+        </ul>
+            </nav>
+    <div class="tablephy" style="width:65vw; height:60vh; overflow:auto;margin-top: 17vh;text-align: center;margin-left: 17.5vw;">
+        <table cellspacing="0" cellpadding="0" border="1" style="width: 65vw;" > 
+            <thead>   
+    <tr>
+        <th class="tds">Quantity</th>
+        <th class="tds">Symbol</th>
+        <th class="tds">Value</th>
+        <th class="tds">Units</th>
+    </tr>
+    </thead>
+    <tbody>
+<tr>
+    <td>speed of light in vacuo</td>
+    <td>c</td>
+    <td>3 x 10<sup>8</sup></td>
+    <td>m/s</td>
+</tr>
+<tr>
+    <td>permeability of free space</td>
+    <td>𝜇<sub>0</sub></td>
+    <td>4π x 10<sup>-7</sup></td>
+    <td>H/m</td>
+</tr>
+<tr>
+    <td>permittivity of free space</td>
+    <td>ε<sub>0</sub></td>
+    <td>8.85 x 10<sup>-12</sup></td>
+    <td>F/m</td>
+</tr>
+<tr>
+    <td>magnitude of charge of electron</td>
+    <td>e</td>
+    <td>1.6 x 10<sup>-19</sup></td>
+    <td>C</td>
+</tr>
+<tr>
+    <td>planck constant</td>
+    <td>h</td>
+    <td>6.63 x 10<sup>-34</sup></td>
+    <td>J s</td>
+</tr>
+<tr>
+    <td>gravitational constant</td>
+    <td>G</td>
+    <td>6.67 x 10<sup>-11</sup></td>
+    <td>N m<sup>2</sup> kg<sup>-2</sup></td>
+</tr>
+<tr>
+    <td>avogadro constant</td>
+    <td>N/A</td>
+    <td>6.02 x 10<sup>23</sup></td>
+    <td>mol<sup>-1</sup></td>
+</tr>
+<tr>
+    <td>molar gas constant</td>
+    <td>R</td>
+    <td>8.31</td>
+    <td>J kg<sup>-1</sup> mol<sup>-1</sup></td>
+</tr>
+<tr>
+    <td>boltzmann constant</td>
+    <td>k</td>
+    <td>1.38 x 10<sup>-23</sup></td>
+    <td>mol<sup>-1</sup></td>
+</tr>
+<tr>
+    <td>stefan constant</td>
+    <td>σ</td>
+    <td>5.67 x 10<sup>-8</sup></td>
+    <td>W m<sup>-2</sup> K<sup>-4</sup></td>
+</tr>
+<tr>
+    <td>wien constant</td>
+    <td>α</td>
+    <td>2.9 x 10<sup>-3</sup></td>
+    <td>m K</td>
+</tr>
+<tr>
+    <td>electron rest mass</td>
+    <td>m<sub>e</sub></td>
+    <td>9.11 x 10<sup>-31</sup></td>
+    <td>kg</td>
+</tr>
+<tr>
+    <td>magnitude of electron charge/mass ratio</td>
+    <td>e / m<sub> e</sub></td>
+    <td>2.9 x 10<sup>-3</sup></td>
+    <td>C kg<sup>-1</sup></td>
+</tr>
+<tr>
+    <td>proton rest mass</td>
+    <td>m<sub>p</sub></td>
+    <td>1.67(3) x 10<sup>-27</sup></td>
+    <td>kg</td>
+</tr>
+<tr>
+    <td>proton charge/mass ratio</td>
+    <td>e / m <sub>p</sub></td>
+    <td>2.9 x 10<sup>-3</sup></td>
+    <td>C kg<sup>-1</sup></td>
+</tr>
+<tr>
+    <td>neutron rest mass</td>
+    <td>m<sub> n</sub></td>
+    <td>1.67(5) x 10<sup>-27</sup></td>
+    <td>kg</td>
+</tr>
+<tr>
+    <td>acceleration due to gravity</td>
+    <td>g</td>
+    <td>9.81</td>
+    <td>m s<sup> -2</sup></td>
+</tr>
+<tr>
+    <td>gravitational field strength</td>
+    <td>g</td>
+    <td>9.81</td>
+    <td>N kg<sup> -1</sup></td>
+</tr>
+<tr>
+    <td>atomic mass unit</td>
+    <td>u</td>
+    <td>1.661 x 10<sup>-27</sup></td>
+    <td>kg</td>
+</tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>

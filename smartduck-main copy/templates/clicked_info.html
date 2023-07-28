@@ -1,0 +1,114 @@
+{% include 'links.html' %}
+<style>
+  body{
+    background-color: #001132;
+    color: black;}
+  sup{
+    font-weight: 550;
+    font-family: 'Mouse Memoirs', sans-serif;
+  }
+  table, th, td {
+  border: 1px solid white;
+  border-collapse: collapse;
+}
+    #app_icon{
+        color: mediumpurple;
+        font-size:26px;
+      }
+      nav{
+        background-color: none;
+        font-family: 'Mouse Memoirs', sans-serif;
+      }
+      #login a, #signup a{
+        color: white;
+      }
+      #navbar{
+        box-shadow: 10px 10px 20px white;
+        font-family: 'Mouse Memoirs', sans-serif;
+      }
+      header{
+        background-image: url('/static/bg.jpg');
+        background-repeat: no-repeat;
+        height: 60vw;
+        background-size: cover;
+      }
+  body{
+    background-color: #001133;
+  }
+  label{
+    font-size: 30px;
+    font-family: 'Mouse Memoirs', sans-serif;
+    color: #ffff66;
+  }
+  .card{
+    background-color: dodgerblue;
+    opacity: 1;
+    box-shadow: 10px 10px 30px #ffff66;
+  }
+  h5, p{
+    color: white;
+    font-family: 'Mouse Memoirs', sans-serif;
+    font-size: 24px;
+    display: inline;
+  }
+  button{
+    background-color: transparent;
+    color: white;
+    border: none;
+    text-shadow: 4px 3px 14px white;
+    margin-left: 10px;
+    margin-top: 15px;
+  }
+</style>
+<nav style="box-shadow: 10px 10px 20px white;font-family: 'Mouse Memoirs', sans-serif;" id="navbar">
+<ul class="mx-2 nav nav-pills">
+  <li class="nav-item mx-2">
+    <a style="color: mediumpurple;font-size: 28px;" id="app_icon" class="nav-link" href="/">{{site_name}}</a>
+  </li>
+  <li class="nav-item mt-2">
+    <a style="color: white;margin-left: 24vw;" class="nav-link" href="/"> Home</a>
+  </li>
+    <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="/about_us"> About us</a>
+  </li>
+      <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="/physics"> Physics</a>
+  </li>
+      <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="/chem_periodic_table"> Chemistry</a>
+  </li>
+        <li class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="https://smartduck-calc.netlify.app"> Maths</a>
+  </li>
+    <li style="margin-left: 31%;" id="login" class="nav-item mt-2">
+    <a style="color: white;" class="nav-link" href="/login"> Login</a>
+  </li>
+  <li id="signup" class="nav-item mt-2">
+    <a style="color: white;" href="/signup" class="nav-link"> SignUp</a>
+  </li>
+</ul>
+    </nav>
+<a href="/chem_periodic_table">
+  <button>
+  <i class="fa-solid fa-arrow-left mx-3"></i>Go back
+</button>
+</a>
+<div style="display: flex;">
+<div class="card" style="width: 30%;align-items: center;justify-content: center;margin: auto;position: absolute;top: 50%;left: 50%;transform: translate(-50%, -50%);">
+  <div class="card-body">
+    <label class="mx-2">Atomic Number: </label>
+    <h5 style="color: white;font-family: 'Mouse Memoirs', sans-serif;font-size: 24px;" class="card-title mb-2">{{importer.atomic_no}}</h5><br>
+        <label class="mx-2">Symbol: </label>
+    <p class="card-link mb-2">{{importer.symbol}}</p><br>
+        <label class="mx-2">Element Name: </label>
+    <p class="card-text mb-2">{{importer.name}}</p><br>
+        <label class="mx-2">Valency: </label>
+    <p class="card-link mb-2">{{importer.valency}}</p><br>
+        <label class="mx-2">State at Room Temperature: </label>
+    <p class="card-link mb-2">{{importer.state_rt}}</p><br>
+        <label class="mx-2">Type of Element: </label>
+    <p class="card-link mb-2">{{importer.eType}}</p>
+
+  </div>
+</div>
+</div>

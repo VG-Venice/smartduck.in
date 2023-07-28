@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    {% include 'links.html' %}
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Phypage - {{site_name}}</title>
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        body{
+            background-color: #001133;
+        }
+        table{
+            background-color: rgb(55, 149, 243);
+            font-family: 'Mouse Memoirs', sans-serif;
+            border: 1px solid black;
+        }
+    .tablephy{
+        font-family: 'Mouse Memoirs', sans-serif;
+        border-collapse: separate;
+        border-radius: 22px;
+        box-shadow: 7px 8px 20px white;
+        border-right: none;
+    }
+    td{
+       border-left: 1px solid black;
+       font-size: 20px;
+       color: #fff724;
+       z-index: 2;
+    }
+    td, th{
+        padding: 3px 4px;
+    }
+    .tds{
+       border-bottom: 1px solid black;
+       border-right: 1px solid black;
+    }
+    th{
+       height: 30px;
+       font-size: 20px;
+    }
+    .tablephy thead th{
+        position: sticky;
+        z-index: 4;
+        top: 0;
+        background: black;
+        border: 1px solid black;
+        border-bottom: 1px solid black;
+        padding: 6px 15px;
+        margin-top: -15px;
+        height: 20px;
+        color: rgba(241, 25, 25, 0.891);
+    }
+    #app_icon{
+        color: mediumpurple;
+        font-size:26px;
+      }
+      nav{
+        background-color: none;
+        font-family: 'Mouse Memoirs', sans-serif;
+      }
+      #login a, #signup a{
+        color: white;
+      }
+      #navbar{
+        box-shadow: 10px 10px 20px white;
+        font-family: 'Mouse Memoirs', sans-serif;
+      }
+      header{
+        background-image: url('/static/bg.jpg');
+        background-repeat: no-repeat;
+        height: 60vw;
+        background-size: cover;
+      }
+     #to{
+       background-color: white;
+       width: 100vw;
+       height: 192px;
+       border-bottom-left-radius: 200%;
+       border-bottom-right-radius: 200%;
+      rotate: 180deg;
+      margin-top: 290px;
+       }
+      h1{
+        color: mediumpurple;
+        margin-top: -650px;
+        margin-left: 30px;
+        font-size: 60px;
+        }  
+      h2{
+        color: white;
+        margin-top: -10px;
+        margin-left: 30px;
+        font-size: 50px;
+        } 
+      .auto-type, span{
+       color: #fff724;
+      }
+    #title{
+      color: royalblue;
+      text-align: center;
+      font-family: 'Mouse Memoirs', sans-serif;
+      font-weight: normal;
+    }
+    .child_el{
+      display: block;
+      text-align: center;
+    }
+    span{
+      font-family: 'Roboto', sans-serif;
+    }
+    a{
+      font-family: 'Roboto', sans-serif;
+    }
+    .nav-link{
+      font-family: 'Mouse Memoirs', sans-serif;
+    }
+    </style>
+</head>
+<body>
+    <nav style="box-shadow: 10px 10px 20px white;font-family: 'Mouse Memoirs', sans-serif;" id="navbar">
+        <ul class="mx-2 nav nav-pills">
+          <li class="nav-item mx-2">
+            <a style="color: mediumpurple;font-size: 28px;" id="app_icon" class="nav-link" href="/">{{site_name}}</a>
+          </li>
+          <li class="nav-item mt-2">
+            <a style="color: white;margin-left: 24vw;" class="nav-link" href="/">Home</a>
+          </li>
+            <li class="nav-item mt-2">
+            <a style="color: white;" class="nav-link" href="/about_us">About us</a>
+          </li>
+              <li class="nav-item mt-2">
+            <a style="color: white;" class="nav-link" href="/physics">Physics</a>
+          </li>
+              <li class="nav-item mt-2">
+            <a style="color: white;" class="nav-link" href="/chem_periodic_table">Chemistry</a>
+          </li>
+                <li class="nav-item mt-2">
+            <a style="color: white;" class="nav-link" href="https://smartduck-calc.netlify.app">Maths</a>
+          </li>
+            <li style="margin-left: 32%;" id="login" class="nav-item mt-2">
+            <a style="color: white;" class="nav-link" href="/login">Login</a>
+          </li>
+          <li id="signup" class="nav-item mt-2">
+            <a style="color: white;" href="/signup" class="nav-link">SignUp</a>
+          </li>
+        </ul>
+            </nav>
+    <div class="tablephy" style="width:65vw; height:60vh; overflow:auto;margin-top: 17vh;text-align: center;margin-left: 17.5vw;">
+        <table cellspacing="0" cellpadding="0" border="1" style="width: 65vw;" > 
+            <thead>   
+    <tr>
+        <th class="tds">Name</th>
+        <th class="tds">Symbol</th>
+        <th class="tds">Unit</th>
+        <th class="tds">Original Value</th>
+        <th class="tds">Positive/Negative</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr>
+        <td>Velocity</td>
+        <td>v</td>
+        <td>m/s</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td>±</td>
+    </tr>
+    <tr>
+        <td>Speed</td>
+        <td>s</td>
+        <td>m/s</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+    </tr>
+    <tr>
+        <td>Distance</td>
+        <td>d</td>
+        <td>m</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+    </tr>
+    <tr>
+        <td>Time</td>
+        <td>t</td>
+        <td>s</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+    </tr>
+    <tr>
+        <td>Acceleration</td>
+        <td>a</td>
+        <td>m/s<sup>2</sup></td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td>±</td>
+    </tr>
+    <tr>
+        <td>Force</td>
+        <td>F</td>
+        <td>N</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td>±</td>
+    </tr>
+    <tr>
+        <td>Energy</td>
+        <td>E</td>
+        <td>J</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td>±</td>
+    </tr>
+    <tr>
+        <td>Mass</td>
+        <td>m</td>
+        <td>kg</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+    </tr>
+    <tr>
+        <td>Power</td>
+        <td>P</td>
+        <td>W</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+    </tr>
+    <tr>
+        <td>Work done</td>
+        <td>W</td>
+        <td>J</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td>±</td>
+    </tr>
+    <tr>
+        <td>Charge</td>
+        <td>Q</td>
+        <td>C</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td>±</td>
+    </tr>
+    <tr>
+        <td>Current</td>
+        <td>I</td>
+        <td>A</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td>±</td>
+    </tr>
+    <tr>
+        <td>Voltage(p.d.)</td>
+        <td>V</td>
+        <td>v</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td>±</td>
+    </tr>
+    <tr>
+        <td>Resistance</td>
+        <td>R</td>
+        <td>Ω</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td>±</td>
+    </tr>
+    <tr>
+        <td>Density</td>
+        <td>ρ</td>
+        <td>g/cm<sup>3</sup></td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+    </tr>
+    <tr>
+        <td>Volume</td>
+        <td>V</td>
+        <td>cm<sup>3</sup></td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+    </tr>
+    <tr>
+        <td>Latent heat</td>
+        <td>L</td>
+        <td>J/kg</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td>±</td>
+    </tr>
+    <tr>
+        <td>Pressure</td>
+        <td>P</td>
+        <td>N/m<sup>2</sup></td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td>±</td>
+    </tr>
+    <tr>
+        <td>Area</td>
+        <td>A</td>
+        <td>m<sup>2</sup></td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+    </tr>
+    <tr>
+        <td>Weight</td>
+        <td>W</td>
+        <td>N</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+    </tr>
+    <tr>
+        <td>Displacement</td>
+        <td>s</td>
+        <td>m</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td>±</td>
+    </tr>
+    <tr>
+        <td>Spring Constant</td>
+        <td>k</td>
+        <td>N/m</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+    </tr>
+    <tr>
+        <td>Final Velocity</td>
+        <td>v</td>
+        <td>m/s</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td>±</td>
+    </tr>
+    <tr>
+        <td>Initial Velocity</td>
+        <td>u</td>
+        <td>m/s</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td>±</td>
+    </tr>
+    <tr>
+        <td>Extension</td>
+        <td>e</td>
+        <td>m</td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+        <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+    </tr>
+    <tr>
+      <td>Height</td>
+      <td>h</td>
+      <td>m</td>
+      <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+      <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+  </tr>
+  <tr>
+    <td>Change in Velocity</td>
+    <td>Δv</td>
+    <td>m/s</td>
+    <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+    <td>±</td>
+</tr>
+<tr>
+  <td>Momentum</td>
+  <td>p</td>
+  <td>kgm/s</td>
+  <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+  <td>±</td>
+</tr>
+<tr>
+  <td>Time Period</td>
+  <td>T</td>
+  <td>s</td>
+  <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+  <td>±</td>
+</tr>
+<tr>
+  <td>Frequency</td>
+  <td>f</td>
+  <td>Hz</td>
+  <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+  <td>±</td>
+</tr>
+<tr>
+  <td>Wavespeed</td>
+  <td>v</td>
+  <td>m/s</td>
+  <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+  <td>±</td>
+</tr>
+<tr>
+  <td>Wavelength</td>
+  <td>λ</td>
+  <td>m</td>
+  <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+  <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+</tr>
+<tr>
+  <td>Force on a conductor</td>
+  <td>F</td>
+  <td>N</td>
+  <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+  <td>±</td>
+</tr>
+<tr>
+  <td>Magnetic Flux Density</td>
+  <td>B</td>
+  <td>T</td>
+  <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+  <td>±</td>
+</tr>
+<tr>
+  <td>Voltage across primary coil</td>
+  <td>V<sub>p</sub></td>
+  <td>v</td>
+  <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+  <td>±</td>
+</tr>
+<tr>
+  <td>Voltage across secondary coil</td>
+  <td>V<sub>s</sub></td>
+  <td>v</td>
+  <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+  <td>±</td>
+</tr>
+<tr>
+  <td>Number of turns in primary coil</td>
+  <td>n<sub>p</sub></td>
+  <td>-</td>
+  <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+  <td>+</td>
+</tr>
+<tr>
+  <td>Number of turns in secondary coil</td>
+  <td>n<sub>s</sub></td>
+  <td>-</td>
+  <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+  <td>+</td>
+</tr>
+<tr>
+  <td>Current in primary coil</td>
+  <td>I<sub>p</sub></td>
+  <td>A</td>
+  <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+  <td>+</td>
+</tr>
+<tr>
+  <td>Current in secondary coil</td>
+  <td>I<sub>s</sub></td>
+  <td>A</td>
+  <td><i class="fa-sharp fa-solid fa-xmark"></i></td>
+  <td>+</td>
+</tr>
+    </tbody>
+</table>
+</div>
+</body>
+</html>
